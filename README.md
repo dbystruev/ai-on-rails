@@ -88,6 +88,5 @@ containing exactly `rails.goswift.org`.) Then enforce HTTPS here too.
 
 ## To customize
 
-- Contact email: search `hello@example.com` in the three `index.html`
-  files and replace (add your Telegram next to it — marked in the contact
-  section).
+- Contact email is `ai@bystruev.com` in all three `index.html`
+  files (add your Telegram next to it — marked in the contact section).
