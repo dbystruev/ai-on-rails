@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI on Rails — Predictable n8n + LLM Automation for Business</title>
+<meta name="description" content="We build predictable AI automations: an agent engineer lays n8n rails, LLM steps handle understanding, every run is journaled, humans approve what matters. Lead intake, support, documents.">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="es" href="es/">
+<link rel="alternate" hreflang="ru" href="ru/">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="x-default" href="./">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><b>AI</b> on Rails</a>
+    <nav class="main">
+      <a href="#method">Method</a>
+      <a href="#industries">Industries</a>
+      <a href="#work">How we work</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang" aria-label="Language"><span>EN</span><a href="es/">ES</a><a href="ru/">RU</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>AI that runs <em>on rails</em>, not on luck.</h1>
+        <p class="lede">Chatbots improvise. We build something else: a deterministic
+        n8n pipeline where every step is fixed — and the neural network only does
+        what it is good at: understanding text. Every run is logged, every
+        customer-facing message is approved by your manager. The result is
+        automation you can trust hundreds of times a day.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#contact">Request a process audit</a>
+          <a class="btn btn-ghost" href="#method">How it works</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="n">$5.2<i>B</i></div><div class="d">n8n valuation in 2026 — workflows became the standard for reliable AI</div></div>
+          <div class="stat"><div class="n">~⅓</div><div class="d">of all AI automations are lead &amp; request intake (Zapier, 10,000 cases)</div></div>
+          <div class="stat"><div class="n">&gt;90<i>%</i></div><div class="d">of durable-engine load in 2026 is agent scenarios (Trigger.dev)</div></div>
+        </div>
+      </div>
+      <div class="railcard" aria-label="Automation schematic">
+        <div class="cap">LEAD INTAKE · live schematic</div>
+        <div class="station"><span class="dot"></span><div><span class="who">rails · n8n</span><div class="what">Request arrives: form / Telegram</div></div></div>
+        <div class="rail-line"></div>
+        <div class="station"><span class="dot"></span><div><span class="who">conductor · LLM step</span><div class="what">Reads free text, fills the client card</div><span class="note">narrow task · strict format · never sends anything</span></div></div>
+        <div class="rail-line"></div>
+        <div class="station"><span class="dot"></span><div><span class="who">rails · n8n + Postgres</span><div class="what">Saves lead, drafts reply &amp; follow-ups</div></div></div>
+        <div class="rail-line"></div>
+        <div class="station human"><span class="dot"></span><div><span class="who">human · Telegram</span><div class="what">Manager taps Send / Edit</div><span class="note">only “yes” releases the message to the client</span></div></div>
+        <div class="loop"><b>journal:</b> input → output → errors → cost → time.<br>Once a week the engineer-agent reads it and tightens the rails.</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block" id="problem">
+    <p class="kicker">01 · Why agents alone fail</p>
+    <h2>Flexibility without rails turns into lottery.</h2>
+    <p class="sub">Coding agents (Claude Code, Codex and the like) build a first
+    version fast — and then solve the same task differently every day. For a
+    business process that runs hundreds of times, that is unacceptable. The math
+    is brutal:</p>
+    <div class="math">20 steps × 95% reliability per step =
+    <code>0.95²⁰ ≈ 36%</code> successful runs end-to-end. Even at 99% per step
+    you only get <code>≈ 82%</code>. Serious automation therefore puts only
+    <em>narrow</em> tasks inside the neural network — and keeps everything
+    else on fixed rails.</div>
+    <div class="cols2">
+      <div class="panel no">
+        <h3>What we never automate</h3>
+        <ul class="tight">
+          <li>Auto-sending and deleting emails</li>
+          <li>Booking travel and charging cards unsupervised</li>
+          <li>Purchases made by an agent's own hands</li>
+          <li>Mass auto-replies to candidates or clients</li>
+        </ul>
+      </div>
+      <div class="panel yes">
+        <h3>What AI does brilliantly</h3>
+        <ul class="tight">
+          <li>Morning briefings and “read it, suggest a draft” mail</li>
+          <li>Monitoring — “write me when X changes”</li>
+          <li>Files, receipts and price lists → tidy tables</li>
+          <li>Call transcripts → notes → straight into the CRM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="method">
+    <p class="kicker">02 · The method — engineer &amp; rails</p>
+    <h2>Two parts. Each does what it is best at.</h2>
+    <p class="sub">This is the architecture the whole market converged on in
+    2026 — OpenAI, Zapier and n8n all landed on the same formula: an agent on
+    top, a predictable process below.</p>
+    <ol class="steps">
+      <li>
+        <div><h3>The engineer (non-deterministic agent)</h3>
+        <p>Builds your automation from a plain-language brief in days, not
+        months. Then re-reads the run journal every week and proposes small
+        fixes — which you approve.</p></div>
+      </li>
+      <li>
+        <div><h3>The rails (n8n workflows + code + database)</h3>
+        <p>A fixed sequence: accept the request, route it, save it, remind on
+        schedule. Runs exactly as specified — a hundred or a thousand times in
+        a row. This is why n8n, not a chat window, sits at the center.</p></div>
+      </li>
+      <li>
+        <div><h3>The conductor (an LLM step inside the car)</h3>
+        <p>One narrow job per call — classify the request, extract dates and
+        amounts, draft a reply. Rigid input format, rigid output format. The
+        train never turns off the rails.</p></div>
+      </li>
+      <li>
+        <div><h3>The gateway (LiteLLM) and the journal (Postgres)</h3>
+        <p>Every model call goes through your own gateway: routing between
+        cheap and smart models, cost control, dashboards. Every run logs input,
+        output, errors, cost and time.</p></div>
+      </li>
+      <li>
+        <div><h3>Durable execution</h3>
+        <p>If step 7 of 10 fails at 3 a.m., the run resumes from step 7 — not
+        from the start. No double charges, no duplicate letters to clients, and
+        an approval can wait a week without breaking anything.</p></div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block" id="industries">
+    <p class="kicker">03 · Three industries, three working rails</p>
+    <h2>Not theory — the three most-requested setups.</h2>
+    <p class="sub">Drawn from industry data (Anthropic, Zapier, McKinsey, Menlo
+    Ventures) and hundreds of real deployments: these are the processes
+    companies automate first, because the payoff is fastest and the risk is
+    lowest.</p>
+
+    <div class="industry">
+      <span class="tag">INDUSTRY 1 · HOME SERVICES, CLINICS, EDUCATION</span>
+      <h3>Lead intake &amp; follow-up that never sleeps</h3>
+      <p>A request arrives at 11 p.m. from a form or Telegram. By morning the
+      client is cold — or already booked with a competitor. The rails accept
+      the request instantly, the LLM fills in a tidy client card from free
+      text, and your manager gets a ready-to-send reply with
+      <strong>Send / Edit</strong> buttons. Every day at 10:00 the system
+      drafts follow-ups for everyone who went quiet 2+ days ago — again, only
+      with approval. As practitioners put it: <em>“the biggest change wasn't
+      an AI tool — it was boring automated follow-ups.”</em></p>
+      <div class="flow">form / Telegram → <b>n8n rails</b> → <b>LLM</b> fills card → Postgres <b>leads + runs</b> → <span class="ok">manager: Send / Edit</span> → client, only after “yes”</div>
+      <p class="result"><strong>Result:</strong> first reply in under a minute,
+      zero lost evening requests, +20–40% of quiet leads reactivated by
+      follow-ups.</p>
+    </div>
+
+    <div class="industry">
+      <span class="tag">INDUSTRY 2 · ONLINE RETAIL &amp; E-COMMERCE</span>
+      <h3>First-line support: instant, but never unsupervised</h3>
+      <p>“Where is my order?”, “does this fit?”, “how do I return it?” — 70%+
+      of tickets are lookups, not decisions. The rails pull the order from your
+      store, the LLM drafts the answer from your knowledge base, and anything
+      uncertain — refunds, complaints, anger — lands in a human queue as a
+      prepared ticket. The Klarna lesson of 2024–2025 (full autopilot, quality
+      collapse, staff hired back) is designed out from day one.</p>
+      <div class="flow">chat / email → <b>n8n rails</b> → order + FAQ lookup → <b>LLM</b> drafts answer → <span class="ok">confident? send · unsure? human queue</span></div>
+      <p class="result"><strong>Result:</strong> instant answers 24/7 for
+      routine questions, agents handle only the cases that need people —
+      support cost per ticket drops several-fold.</p>
+    </div>
+
+    <div class="industry">
+      <span class="tag">INDUSTRY 3 · ACCOUNTING &amp; LEGAL FIRMS</span>
+      <h3>Invoices and documents with an exception queue</h3>
+      <p>Extracting amounts, dates and counterparties from scans is exactly the
+      narrow task LLMs do well — and exactly where blind trust is dangerous.
+      The rails parse every document, and anything below ~97% confidence goes
+      to your specialist in an exception queue instead of into the books.
+      Humans stop typing and start verifying.</p>
+      <div class="flow">scan / PDF → <b>n8n rails</b> → <b>LLM</b> extracts fields → confidence ≥ 97%? → <span class="ok">into ledger · else → exception queue</span></div>
+      <p class="result"><strong>Result:</strong> routine documents processed in
+      seconds, a clean audit trail for every figure, specialists focused on
+      judgment — not data entry.</p>
+    </div>
+  </section>
+
+  <section class="block" id="work">
+    <p class="kicker">04 · How we work</p>
+    <h2>Live in weeks, tuned forever.</h2>
+    <ol class="steps">
+      <li>
+        <div><h3>Process audit (1 week)</h3>
+        <p>We map where requests get stuck, what it costs you, and which single
+        process pays for the whole project. You get a fixed quote — no hourly
+        fog.</p></div>
+      </li>
+      <li>
+        <div><h3>Rails, first version (2–3 weeks)</h3>
+        <p>The engineer-agent builds the deterministic pipeline on your server:
+        triggers, LLM steps via your gateway, database, manager approvals in
+        Telegram. You watch the first runs in a live journal.</p></div>
+      </li>
+      <li>
+        <div><h3>Hardening &amp; handover</h3>
+        <p>HTTPS everywhere, secrets locked down, HTTPS-only access, documented
+        prompts and runbooks. Your team learns the two buttons that matter:
+        approve and escalate.</p></div>
+      </li>
+      <li>
+        <div><h3>Weekly tuning</h3>
+        <p>The agent re-reads the journal, finds where quality slips, and
+        proposes rail adjustments. Automation that gets better instead of
+        rotting — that is the whole point of the engineer-and-rails loop.</p></div>
+      </li>
+    </ol>
+    <div class="stack"><span>n8n</span><span>LiteLLM gateway</span><span>Postgres / Supabase</span><span>Telegram approvals</span><span>Caddy HTTPS</span><span>Docker on your VPS</span></div>
+  </section>
+
+  <section class="block" id="faq">
+    <p class="kicker">05 · FAQ</p>
+    <h2>Honest answers.</h2>
+    <details>
+      <summary>Is n8n dead? Everyone talks about agents now.</summary>
+      <p>No — its role changed. In 2026 n8n raised at a $5.2B valuation and
+      shipped Agents, where a workflow becomes the agent's tool: it “executes
+      exactly as specified.” ChatGPT's agent builder closed; Zapier plugged the
+      agent back into the ordinary step-by-step flow. The market verdict: an
+      agent on top, a predictable process below.</p>
+    </details>
+    <details>
+      <summary>Will the AI send something stupid to a client?</summary>
+      <p>Not through our rails. Anything customer-facing waits for a human tap
+      — Send or Edit in Telegram. The LLM reads and drafts; the rails and your
+      manager decide. Fully autonomous sending is on our never-automate list.</p>
+    </details>
+    <details>
+      <summary>Where do my data and models live?</summary>
+      <p>On your server: n8n, the database and the LiteLLM gateway run in
+      Docker on your VPS. Model calls can be routed to any provider — or a
+      European / local one if compliance requires it. No data passes through
+      our infrastructure after handover.</p>
+    </details>
+    <details>
+      <summary>What does it cost to run?</summary>
+      <p>A base setup fits a small VPS (2 CPU / 4 GB RAM, a few euros a month).
+      Model costs are capped per workflow in the gateway — typically cents per
+      lead or ticket — and every cent is visible in the journal.</p>
+    </details>
+    <details>
+      <summary>We already tried a chatbot and it flopped. How is this different?</summary>
+      <p>A chatbot improvises the whole conversation. Our LLM step does one
+      narrow job with a strict format inside a fixed pipeline — and a human
+      approves the outcome. That is the difference between a demo and a
+      process that survives contact with real clients.</p>
+    </details>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="contact">
+      <h2>Show us your stuck process. We'll show you the rails.</h2>
+      <p>Send one paragraph: where do requests pile up in your business? Within
+      a week you'll get back a rails sketch — which steps become deterministic,
+      where the LLM sits, and what it pays back. Free, no obligations.</p>
+      <div class="cta-row" style="margin-top:22px">
+        <a class="btn btn-solid" href="mailto:hello@example.com?subject=Process%20audit%20request">hello@example.com</a>
+      </div>
+      <p style="font-size:13.5px">Prefer Telegram? Add your handle next to the email when you deploy — one line in this file.</p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>AI on Rails — predictable n8n + LLM automation.</span>
+    <span style="margin-left:auto"></span>
+    <a href="./">English</a><a href="es/">Español</a><a href="ru/">Русский</a>
+  </div>
+</footer>
+</body>
+</html>

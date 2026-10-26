@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI on Rails — Automatización predecible con n8n + LLM para tu negocio</title>
+<meta name="description" content="Construimos automatizaciones con IA que sí son fiables: un agente ingeniero tiende los rieles en n8n, los pasos LLM solo entienden texto, cada ejecución queda registrada y tu equipo aprueba lo importante.">
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="ru" href="../ru/">
+<link rel="alternate" hreflang="es" href="./">
+<link rel="alternate" hreflang="x-default" href="../">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><b>AI</b> on Rails</a>
+    <nav class="main">
+      <a href="#metodo">Método</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#trabajo">Cómo trabajamos</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="lang" aria-label="Idioma"><a href="../">EN</a><span>ES</span><a href="../ru/">RU</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>IA que corre <em>sobre rieles</em>, no sobre suerte.</h1>
+        <p class="lede">Los chatbots improvisan. Nosotros construimos otra cosa:
+        un proceso determinista en n8n donde cada paso está fijado — y la red
+        neuronal solo hace lo que se le da bien: entender texto. Cada ejecución
+        queda registrada, cada mensaje al cliente lo aprueba tu encargado. El
+        resultado es una automatización en la que puedes confiar cientos de
+        veces al día.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#contacto">Pedir una auditoría</a>
+          <a class="btn btn-ghost" href="#metodo">Cómo funciona</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="n">$5.2<i>B</i></div><div class="d">valoración de n8n en 2026 — los flujos se volvieron el estándar de la IA fiable</div></div>
+          <div class="stat"><div class="n">~⅓</div><div class="d">de todas las automatizaciones con IA es captación de solicitudes y leads (Zapier, 10.000 casos)</div></div>
+          <div class="stat"><div class="n">&gt;90<i>%</i></div><div class="d">de la carga de los motores durables en 2026 son escenarios con agentes (Trigger.dev)</div></div>
+        </div>
+      </div>
+      <div class="railcard" aria-label="Esquema de la automatización">
+        <div class="cap">CAPTACIÓN DE LEADS · esquema en vivo</div>
+        <div class="station"><span class="dot"></span><div><span class="who">rieles · n8n</span><div class="what">Llega la solicitud: formulario / Telegram</div></div></div>
+        <div class="rail-line"></div>
+        <div class="station"><span class="dot"></span><div><span class="who">conductor · paso LLM</span><div class="what">Lee el texto libre y rellena la ficha del cliente</div><span class="note">tarea estrecha · formato estricto · nunca envía nada</span></div></div>
+        <div class="rail-line"></div>
+        <div class="station"><span class="dot"></span><div><span class="who">rieles · n8n + Postgres</span><div class="what">Guarda el lead, prepara respuesta y seguimientos</div></div></div>
+        <div class="rail-line"></div>
+        <div class="station human"><span class="dot"></span><div><span class="who">humano · Telegram</span><div class="what">El encargado pulsa Enviar / Editar</div><span class="note">solo el “sí” libera el mensaje al cliente</span></div></div>
+        <div class="loop"><b>diario:</b> entrada → salida → errores → coste → tiempo.<br>Una vez por semana el agente-ingeniero lo lee y ajusta los rieles.</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block" id="problema">
+    <p class="kicker">01 · Por qué los agentes solos fallan</p>
+    <h2>Flexibilidad sin rieles se convierte en lotería.</h2>
+    <p class="sub">Los agentes programadores (Claude Code, Codex y similares)
+    arman una primera versión rápido — y luego resuelven la misma tarea de forma
+    distinta cada día. Para un proceso que se repite cientos de veces, eso es
+    inaceptable. La matemática es brutal:</p>
+    <div class="math">20 pasos × 95% de fiabilidad por paso =
+    <code>0.95²⁰ ≈ 36%</code> de ejecuciones exitosas de punta a punta. Incluso
+    con 99% por paso solo llegas al <code>≈ 82%</code>. Por eso la
+    automatización seria pone dentro de la red neuronal solo tareas
+    <em>estrechas</em> — y deja todo lo demás sobre rieles fijos.</div>
+    <div class="cols2">
+      <div class="panel no">
+        <h3>Lo que nunca automatizamos</h3>
+        <ul class="tight">
+          <li>Envío y borrado automático de correos</li>
+          <li>Reservas de viajes y cargos sin supervisión</li>
+          <li>Compras hechas por la mano del agente</li>
+          <li>Respuestas masivas automáticas a candidatos o clientes</li>
+        </ul>
+      </div>
+      <div class="panel yes">
+        <h3>Lo que la IA hace de maravilla</h3>
+        <ul class="tight">
+          <li>Resúmenes matutinos y “léelo y sugiere un borrador”</li>
+          <li>Monitoreo — “avísame cuando X cambie”</li>
+          <li>Archivos, recibos y listas de precios → tablas ordenadas</li>
+          <li>Transcripciones de llamadas → notas → directo al CRM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="metodo">
+    <p class="kicker">02 · El método — ingeniero y rieles</p>
+    <h2>Dos partes. Cada una hace lo que mejor sabe.</h2>
+    <p class="sub">Es la arquitectura a la que todo el mercado llegó en 2026 —
+    OpenAI, Zapier y n8n coincidieron en la misma fórmula: un agente arriba,
+    un proceso predecible abajo.</p>
+    <ol class="steps">
+      <li>
+        <div><h3>El ingeniero (agente no determinista)</h3>
+        <p>Construye tu automatización desde una descripción en lenguaje normal
+        en días, no en meses. Después relee el diario de ejecuciones cada semana
+        y propone pequeñas mejoras — que tú apruebas.</p></div>
+      </li>
+      <li>
+        <div><h3>Los rieles (flujos n8n + código + base de datos)</h3>
+        <p>Una secuencia fija: aceptar la solicitud, clasificarla, guardarla,
+        recordar a tiempo. Funciona exactamente como está especificado — cien o
+        mil veces seguidas. Por eso en el centro está n8n, no una ventana de chat.</p></div>
+      </li>
+      <li>
+        <div><h3>El conductor (un paso LLM dentro del vagón)</h3>
+        <p>Un trabajo estrecho por llamada — clasificar la solicitud, extraer
+        fechas e importes, redactar una respuesta. Formato rígido de entrada y
+        de salida. El tren nunca se sale de los rieles.</p></div>
+      </li>
+      <li>
+        <div><h3>La pasarela (LiteLLM) y el diario (Postgres)</h3>
+        <p>Cada llamada al modelo pasa por tu propia pasarela: reparto entre
+        modelos baratos e inteligentes, control de costes, paneles. Cada
+        ejecución registra entrada, salida, errores, coste y tiempo.</p></div>
+      </li>
+      <li>
+        <div><h3>Ejecución durable</h3>
+        <p>Si el paso 7 de 10 falla a las 3 a.m., la ejecución continúa desde
+        el paso 7 — no desde el principio. Sin cargos dobles, sin cartas
+        duplicadas a clientes, y una aprobación puede esperar una semana sin
+        romper nada.</p></div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="block" id="sectores">
+    <p class="kicker">03 · Tres sectores, tres rieles que funcionan</p>
+    <h2>No es teoría — los tres montajes más pedidos.</h2>
+    <p class="sub">Basados en datos del sector (Anthropic, Zapier, McKinsey,
+    Menlo Ventures) y cientos de despliegues reales: son los procesos que las
+    empresas automatizan primero, porque el retorno es más rápido y el riesgo
+    es menor.</p>
+
+    <div class="industry">
+      <span class="tag">SECTOR 1 · SERVICIOS AL HOGAR, CLÍNICAS, EDUCACIÓN</span>
+      <h3>Captación y seguimiento que nunca duermen</h3>
+      <p>Una solicitud llega a las 11 p.m. desde un formulario o Telegram. Por
+      la mañana el cliente ya está frío — o ya reservó con la competencia. Los
+      rieles aceptan la solicitud al instante, el LLM rellena una ficha
+      ordenada desde el texto libre, y tu encargado recibe una respuesta lista
+      con botones de <strong>Enviar / Editar</strong>. Cada día a las 10:00 el
+      sistema prepara seguimientos para quienes llevan 2+ días en silencio —
+      otra vez, solo con aprobación. Como dicen los practitioners:
+      <em>“el mayor cambio no fue una herramienta de IA — fue el aburrido
+      seguimiento automatizado.”</em></p>
+      <div class="flow">formulario / Telegram → <b>rieles n8n</b> → <b>LLM</b> rellena ficha → Postgres <b>leads + runs</b> → <span class="ok">encargado: Enviar / Editar</span> → cliente, solo tras el “sí”</div>
+      <p class="result"><strong>Resultado:</strong> primera respuesta en menos
+      de un minuto, cero solicitudes nocturnas perdidas, +20–40% de leads
+      silenciosos reactivados con seguimientos.</p>
+    </div>
+
+    <div class="industry">
+      <span class="tag">SECTOR 2 · RETAIL ONLINE Y E-COMMERCE</span>
+      <h3>Primera línea de soporte: instantánea, pero nunca sin supervisión</h3>
+      <p>“¿Dónde está mi pedido?”, “¿me quedará bien?”, “¿cómo lo devuelvo?” —
+      más del 70% de los tickets son consultas, no decisiones. Los rieles sacan
+      el pedido de tu tienda, el LLM redacta la respuesta desde tu base de
+      conocimiento, y todo lo dudoso — reembolsos, quejas, enfado — cae en una
+      cola humana como ticket ya preparado. La lección de Klarna 2024–2025
+      (piloto automático total, caída de calidad, recontratación) queda
+      descartada desde el primer día.</p>
+      <div class="flow">chat / email → <b>rieles n8n</b> → pedido + FAQ → <b>LLM</b> redacta → <span class="ok">¿seguro? enviar · ¿duda? cola humana</span></div>
+      <p class="result"><strong>Resultado:</strong> respuestas instantáneas 24/7
+      para lo rutinario, tu equipo solo atiende lo que necesita personas — el
+      coste por ticket cae varias veces.</p>
+    </div>
+
+    <div class="industry">
+      <span class="tag">SECTOR 3 · ASESORÍAS Y DESPACHOS</span>
+      <h3>Facturas y documentos con cola de excepciones</h3>
+      <p>Extraer importes, fechas y contrapartes de escaneos es justo la tarea
+      estrecha que los LLM hacen bien — y justo donde la confianza ciega es
+      peligrosa. Los rieles procesan cada documento, y todo lo que esté por
+      debajo del ~97% de confianza va a tu especialista en una cola de
+      excepciones en vez de entrar en los libros. Las personas dejan de teclear
+      y empiezan a verificar.</p>
+      <div class="flow">escaneo / PDF → <b>rieles n8n</b> → <b>LLM</b> extrae campos → confianza ≥ 97%? → <span class="ok">a contabilidad · si no → excepciones</span></div>
+      <p class="result"><strong>Resultado:</strong> documentos rutinarios
+      procesados en segundos, trazabilidad total de cada cifra, especialistas
+      dedicados al criterio — no a picar datos.</p>
+    </div>
+  </section>
+
+  <section class="block" id="trabajo">
+    <p class="kicker">04 · Cómo trabajamos</p>
+    <h2>En vivo en semanas, afinado para siempre.</h2>
+    <ol class="steps">
+      <li>
+        <div><h3>Auditoría del proceso (1 semana)</h3>
+        <p>Mapeamos dónde se atascan las solicitudes, cuánto te cuesta y qué
+        proceso único paga todo el proyecto. Recibes un presupuesto cerrado —
+        sin niebla de horas.</p></div>
+      </li>
+      <li>
+        <div><h3>Rieles, primera versión (2–3 semanas)</h3>
+        <p>El agente-ingeniero construye el proceso determinista en tu servidor:
+        disparadores, pasos LLM vía tu pasarela, base de datos, aprobaciones
+        del encargado en Telegram. Ves las primeras ejecuciones en un diario en
+        vivo.</p></div>
+      </li>
+      <li>
+        <div><h3>Blindaje y entrega</h3>
+        <p>HTTPS en todo, secretos bajo llave, accesos documentados, prompts y
+        manuales. Tu equipo aprende los dos botones que importan: aprobar y
+        escalar.</p></div>
+      </li>
+      <li>
+        <div><h3>Afinado semanal</h3>
+        <p>El agente relee el diario, detecta dónde cae la calidad y propone
+        ajustes en los rieles. Automatización que mejora en vez de pudrirse —
+        ese es todo el sentido del ciclo ingeniero-y-rieles.</p></div>
+      </li>
+    </ol>
+    <div class="stack"><span>n8n</span><span>pasarela LiteLLM</span><span>Postgres / Supabase</span><span>aprobaciones en Telegram</span><span>Caddy HTTPS</span><span>Docker en tu VPS</span></div>
+  </section>
+
+  <section class="block" id="faq">
+    <p class="kicker">05 · Preguntas</p>
+    <h2>Respuestas honestas.</h2>
+    <details>
+      <summary>¿Está muerto n8n? Ahora todos hablan de agentes.</summary>
+      <p>No — cambió su rol. En 2026 n8n levantó a valoración de $5.2B y lanzó
+      Agents, donde el flujo se vuelve la herramienta del agente: “se ejecuta
+      exactamente como está especificado”. El constructor de agentes de ChatGPT
+      cerró; Zapier devolvió el agente al flujo ordinario paso a paso. El
+      veredicto del mercado: un agente arriba, un proceso predecible abajo.</p>
+    </details>
+    <details>
+      <summary>¿La IA puede enviarle una tontería a un cliente?</summary>
+      <p>No por nuestros rieles. Todo lo que mira al cliente espera un toque
+      humano — Enviar o Editar en Telegram. El LLM lee y redacta; los rieles y
+      tu encargado deciden. El envío totalmente autónomo está en nuestra lista
+      de lo que nunca se automatiza.</p>
+    </details>
+    <details>
+      <summary>¿Dónde viven mis datos y los modelos?</summary>
+      <p>En tu servidor: n8n, la base de datos y la pasarela LiteLLM corren en
+      Docker en tu VPS. Las llamadas se pueden dirigir a cualquier proveedor —
+      o a uno europeo / local si el cumplimiento lo exige. Tras la entrega,
+      ningún dato pasa por nuestra infraestructura.</p>
+    </details>
+    <details>
+      <summary>¿Cuánto cuesta operarlo?</summary>
+      <p>La base cabe en un VPS pequeño (2 CPU / 4 GB RAM, unos euros al mes).
+      Los costes de modelo se topan por flujo en la pasarela — normalmente
+      céntimos por lead o ticket — y cada céntimo queda visible en el diario.</p>
+    </details>
+    <details>
+      <summary>Ya probamos un chatbot y fracasó. ¿En qué es distinto esto?</summary>
+      <p>Un chatbot improvisa toda la conversación. Nuestro paso LLM hace un
+      trabajo estrecho con formato estricto dentro de un proceso fijo — y un
+      humano aprueba el resultado. Esa es la diferencia entre una demo y un
+      proceso que sobrevive al contacto con clientes reales.</p>
+    </details>
+  </section>
+
+  <section class="block" id="contacto">
+    <div class="contact">
+      <h2>Muéstranos tu proceso atascado. Te mostramos los rieles.</h2>
+      <p>Envía un párrafo: ¿dónde se acumulan las solicitudes en tu negocio? En
+      una semana recibirás un esquema de rieles — qué pasos se vuelven
+      deterministas, dónde va el LLM y qué retorno deja. Gratis, sin
+      compromiso.</p>
+      <div class="cta-row" style="margin-top:22px">
+        <a class="btn btn-solid" href="mailto:hello@example.com?subject=Solicitud%20de%20auditor%C3%ADa">hello@example.com</a>
+      </div>
+      <p style="font-size:13.5px">¿Prefieres Telegram? Añade tu usuario junto al email al desplegar — una línea en este archivo.</p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>AI on Rails — automatización predecible con n8n + LLM.</span>
+    <span style="margin-left:auto"></span>
+    <a href="../">English</a><a href="./">Español</a><a href="../ru/">Русский</a>
+  </div>
+</footer>
+</body>
+</html>
