@@ -7,6 +7,20 @@ Trilingual landing page selling predictable **n8n + LLM automation**
 - Every page carries a language switch in the header.
 - Pure static HTML + one `style.css`. No build step, no JavaScript.
 
+## Preview (how the site looks)
+
+English:
+
+![English landing page](preview/preview-en.png)
+
+Español:
+
+![Página en español](preview/preview-es.png)
+
+Русский:
+
+![Страница на русском](preview/preview-ru.png)
+
 ## Local preview
 
 ```bash
